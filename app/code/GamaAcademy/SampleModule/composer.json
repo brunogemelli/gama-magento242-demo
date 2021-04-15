@@ -1,0 +1,24 @@
+{
+    "name": "gamaacademy/module-samplemodule",
+    "description": "Sample Module",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "bruno.gemeli@gmail.com",
+            "name": "Bruno Gemelli"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "twilio/sdk": "^6.4"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "GamaAcademy\\SampleModule\\": ""
+        }
+    }
+}
