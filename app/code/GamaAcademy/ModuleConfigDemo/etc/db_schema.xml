@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="gamaacademy_sample_table" resource="default" engine="innodb" comment="Gama Academy Sample Table">
+        <column xsi:type="smallint" name="entity_id" unsigned="false" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Name"/>
+        <column xsi:type="varchar" name="city" nullable="true" length="255" comment="City"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <index referenceId="GAMAACADEMY_CITY" indexType="fulltext">
+            <column name="city"/>
+        </index>
+    </table>
+    <table name="cms_block" resource="default">
+        <column xsi:type="varchar" name="my_custom_column" nullable="true" length="10" comment="Testing" />
+    </table>
+</schema>

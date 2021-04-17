@@ -1,0 +1,20 @@
+{
+    "gamaacademy_sample_table": {
+        "column": {
+            "entity_id": true,
+            "name": true,
+            "city": true
+        },
+        "index": {
+            "GAMAACADEMY_SAMPLE_TABLE_CITY": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "cms_block": {
+        "column": {
+            "my_custom_column": true
+        }
+    }
+}

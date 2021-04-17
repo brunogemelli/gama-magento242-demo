@@ -1,0 +1,8 @@
+{
+    "gamaacademy_sample_table": {
+        "column": {
+            "father_name": true,
+            "mother_name": true
+        }
+    }
+}
