@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="GamaAcademy_ModuleConfigDemo::moduleconfigdemo"
+             title="My Module Config Demo"
+             translate="title"
+             module="GamaAcademy_ModuleConfigDemo"
+             sortOrder="200"
+             resource="GamaAcademy_ModuleConfigDemo::moduleconfigdemo" />
+    </menu>
+</config>

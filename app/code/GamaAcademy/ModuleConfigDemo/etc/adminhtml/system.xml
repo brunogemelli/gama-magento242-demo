@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="gamaacademy" translate="label" sortOrder="1">
+            <label>Gama Academy</label>
+        </tab>
+        <section id="moduleconfigdemo" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Module Config Demo</label>
+            <tab>gamaacademy</tab>
+            <resource>GamaAcademy_ModuleConfigDemo::moduleconfigdemo</resource>
+            <group id="group1" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Label Group 1</label>
+                <field id="field_enabled" translate="label comment" type="select" sortOrder="5" showInDefault="1" showInWebsite="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="field1" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Name Field 1</label>
+                    <comment>Any comment</comment>
+                </field>
+                <field id="field2" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Name Field 2</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

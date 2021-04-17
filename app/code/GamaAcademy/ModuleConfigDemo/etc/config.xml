@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <moduleconfigdemo>
+            <group1>
+                <field_enabled>1</field_enabled>
+                <field1>Letter A</field1>
+                <field2>Letter B</field2>
+            </group1>
+        </moduleconfigdemo>
+    </default>
+</config>
