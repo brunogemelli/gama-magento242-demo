@@ -1,6 +1,6 @@
 <?php
 
-namespace GamaAcademy\ModuleConfigDemo\Model;
+namespace GamaAcademy\ModuleConfigDemo\Model\Config;
 
 class Example implements \Magento\Framework\Option\ArrayInterface
 {

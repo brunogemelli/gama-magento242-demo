@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- REWRITES / CLASSES DEFAULT -->
+
+        <!-- Rewriting a concrete class -->
+    <preference for="Magento\Catalog\Model\Product" type="GamaAcademy\ModuleConfigDemo\Model\Product" />
+    <preference for="Magento\Catalog\Model\Product\Url" type="GamaAcademy\ModuleConfigDemo\Model\Product\Url" />
+
+    <!--    &lt;!&ndash; Defining an interface preference &ndash;&gt;-->
+    <!--    <preference for="GamaAcademy\ModuleConfigDemo\Model\PenInterface" type="GamaAcademy\ModuleConfigDemo\Model\PenBic" />-->
+
+        <preference for="GamaAcademy\ModuleConfigDemo\Model\EraserInterface" type="GamaAcademy\ModuleConfigDemo\Model\Eraser" />
+
+
+
+    <!-- MANIPULACAO DE DEPENDENCIA -->
+
+        <!-- Changing one DI for a specific file -->
+        <type name="GamaAcademy\ModuleConfigDemo\Model\Product\Url">
+            <arguments>
+                <argument name="pen" xsi:type="object">GamaAcademy\ModuleConfigDemo\Model\PenFaber</argument>
+            </arguments>
+        </type>
+
+        <type name="GamaAcademy\ModuleConfigDemo\Model\EraserDependency">
+            <arguments>
+                <argument name="size" xsi:type="string">Padrão</argument>
+            </arguments>
+        </type>
+
+
+
+    <!-- MANIPULACAO DE DEPENDENCIAS USANDO VIRTUAL TYPE -->
+        <virtualType name="MyFirstVirtualTypeExample" type="GamaAcademy\ModuleConfigDemo\Model\EraserDependency">
+            <arguments>
+                <argument name="size" xsi:type="string">Gigante</argument>
+            </arguments>
+        </virtualType>
+
+        <type name="GamaAcademy\ModuleConfigDemo\Model\Eraser">
+            <arguments>
+                <argument name="classBruno" xsi:type="object">MyFirstVirtualTypeExample</argument>
+            </arguments>
+        </type>
+
+</config>
