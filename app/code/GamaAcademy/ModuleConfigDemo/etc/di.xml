@@ -8,7 +8,7 @@
     <preference for="Magento\Catalog\Model\Product\Url" type="GamaAcademy\ModuleConfigDemo\Model\Product\Url" />
 
     <!--    &lt;!&ndash; Defining an interface preference &ndash;&gt;-->
-    <!--    <preference for="GamaAcademy\ModuleConfigDemo\Model\PenInterface" type="GamaAcademy\ModuleConfigDemo\Model\PenBic" />-->
+        <preference for="GamaAcademy\ModuleConfigDemo\Model\PenInterface" type="GamaAcademy\ModuleConfigDemo\Model\PenBic" />
 
         <preference for="GamaAcademy\ModuleConfigDemo\Model\EraserInterface" type="GamaAcademy\ModuleConfigDemo\Model\Eraser" />
 
@@ -40,7 +40,7 @@
 
         <type name="GamaAcademy\ModuleConfigDemo\Model\Eraser">
             <arguments>
-                <argument name="classBruno" xsi:type="object">MyFirstVirtualTypeExample</argument>
+                <argument name="eraserDependency" xsi:type="object">MyFirstVirtualTypeExample</argument>
             </arguments>
         </type>
 
