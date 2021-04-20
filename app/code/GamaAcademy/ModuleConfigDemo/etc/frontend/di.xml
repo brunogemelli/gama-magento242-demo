@@ -3,6 +3,4 @@
     <!-- Defining an interface preference inside a specific area -->
     <preference for="GamaAcademy\ModuleConfigDemo\Model\PenInterface" type="GamaAcademy\ModuleConfigDemo\Model\PenXpto" />
 
-    <preference for="Magento\Catalog\Block\Product\View" type="GamaAcademy\ModuleConfigDemo\Block\Product" />
-
 </config>

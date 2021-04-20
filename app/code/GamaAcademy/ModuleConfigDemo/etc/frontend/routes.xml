@@ -4,5 +4,9 @@
         <route id="gama" frontName="gama">
             <module name="GamaAcademy_ModuleConfigDemo" />
         </route>
+<!--        <route id="customer">-->
+<!--            <module name="GamaAcademy_ModuleConfigDemo" after="Magento_Customer" />-->
+<!--        </route>-->
     </router>
 </config>
+

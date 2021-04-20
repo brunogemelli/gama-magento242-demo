@@ -1,0 +1,38 @@
+<?php /** @var $block InteractOne\WebForms\Block\Product\Quote\Request */?>
+
+<button type="button" id="btn-test" class="action submit" title="<?php echo $block->escapeHtml(__('My Call to Action')); ?>">
+    <span><?php echo $block->escapeHtml(__('My Call to Action')); ?></span>
+</button>
+
+<script>
+    require([
+        'jquery',
+        'domReady!'
+    ], function ($) {
+
+        $('#btn-test').click(function (event) {
+            redirectToForm($(this));
+        });
+
+        function redirectToForm(button)
+        {
+            var productName = '<?php echo $block->escapeJs($block->getProduct()->getName()); ?>';
+            var productSku = '<?php echo $block->escapeJs($block->getProduct()->getSku()); ?>';
+            var productQty = getProductQty(button);
+            alert(productName);
+
+            //window.location.href = '<?php //echo $block->getFormUrl(); ?>//' +
+            //    '?product=' + productName + ' - ' + productSku +
+            //    '&product_qty=' + productQty;
+        }
+
+        function getProductQty(button)
+        {
+            var element = $(button).closest('div').find('.box-tocart input.qty');
+            return (element.length > 0) ? element.val() : 1;
+        }
+
+    });
+</script>
+
+

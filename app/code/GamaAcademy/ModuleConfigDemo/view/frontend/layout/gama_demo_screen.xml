@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Page Title Sample</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+<!--            <block class="Magento\Customer\Block\Form\Register" name="customer_form_register" template="Magento_Customer::form/register.phtml">-->
+<!--                <arguments>-->
+<!--                    <argument name="attribute_data" xsi:type="object">Magento\Customer\Block\DataProviders\AddressAttributeData</argument>-->
+<!--                </arguments>-->
+<!--                <container name="form.additional.info" as="form_additional_info"/>-->
+<!--                <container name="customer.form.register.fields.before" as="form_fields_before" label="Form Fields Before" htmlTag="div" htmlClass="customer-form-before"/>-->
+<!--            </block>-->
+            <block class="GamaAcademy\ModuleConfigDemo\Block\ScreenExample"
+                   name="my_block_name"
+                   template="GamaAcademy_ModuleConfigDemo::screen.phtml" >
+                <arguments>
+                    <argument name="my_param" xsi:type="string">My value</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

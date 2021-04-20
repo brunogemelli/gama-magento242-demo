@@ -335,6 +335,7 @@ return [
         'Dotdigitalgroup_Sms' => 1,
         'GamaAcademy_ModuleConfigDemo' => 1,
         'GamaAcademy_ModuleDb2' => 1,
+        'GamaAcademy_RestApiDemo' => 1,
         'Klarna_Core' => 1,
         'Klarna_Ordermanagement' => 1,
         'Klarna_Kp' => 1,

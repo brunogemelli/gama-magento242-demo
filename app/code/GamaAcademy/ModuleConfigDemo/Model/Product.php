@@ -54,6 +54,7 @@ class Product extends \Magento\Catalog\Model\Product
 
     public function getName()
     {
+        return parent::getName();
         return 'BRUNO TESTE - ' . $this->_getData(self::NAME);
     }
 

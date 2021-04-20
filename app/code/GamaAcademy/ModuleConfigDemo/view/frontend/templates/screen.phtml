@@ -1,0 +1,10 @@
+<?php /** @var \GamaAcademy\ModuleConfigDemo\Block\ScreenExample $block */ ?>
+
+<div>
+    <h1><?php echo $block->getMyMethodWithMyLogic(); ?></h1>
+    <p>Nº randomico: <?php echo rand(0,10000); ?></p>
+    <form>
+        <input type="text" value="<?php $block->getRequestValue('name'); ?>" name="assa2323as">
+        <button type="submit">Enviar</button>
+    </form>
+</div>
