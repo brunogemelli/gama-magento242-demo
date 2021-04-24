@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="gamaacademy_vacina" resource="default" engine="innodb" comment="Vacina">
+        <column xsi:type="smallint" name="id" unsigned="false" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="boolean" name="disponivel" nullable="false" default="true" comment="Disponivel"/>
+        <column xsi:type="varchar" name="nome" nullable="false" length="255" comment="Name"/>
+        <column xsi:type="varchar" name="fabricante" nullable="false" length="255" comment="Fabricante"/>
+        <column xsi:type="varchar" name="laboratorio" nullable="false" length="255" comment="Laboratório"/>
+        <column xsi:type="float" name="eficacia" nullable="true" default="0" comment="Eficácia"/>
+        <column xsi:type="smallint" name="nro_doses" nullable="false" default="0" comment="Número de doses"/>
+        <column xsi:type="varchar" name="pais" nullable="false" length="255" comment="País"/>
+        <column xsi:type="timestamp" name="data_criacao" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Block Creation Time"/>
+        <column xsi:type="timestamp" name="data_atualizacao" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Block Modification Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <index referenceId="GAMAACADEMY_ID" indexType="fulltext">
+            <column name="name"/>
+        </index>
+    </table>
+</schema>

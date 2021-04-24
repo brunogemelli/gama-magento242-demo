@@ -1,0 +1,21 @@
+{
+    "name": "gamaacademy/module-vacina",
+    "description": "Sample Module Vacina",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "bruno.gemeli@gmail.com",
+            "name": "Bruno Gemelli"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "GamaAcademy\\Vacina\\": ""
+        }
+    }
+}

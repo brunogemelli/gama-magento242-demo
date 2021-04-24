@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Cms Block -->
+    <route url="/V1/vacina/:idVacina" method="GET">
+        <service class="GamaAcademy\Vacina\Api\VacinaRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/vacina/search" method="GET">
+        <service class="GamaAcademy\Vacina\Api\VacinaRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/vacina" method="POST">
+        <service class="GamaAcademy\Vacina\Api\VacinaRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/vacina/:id" method="PUT">
+        <service class="GamaAcademy\Vacina\Api\VacinaRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/vacina/:idVacina" method="DELETE">
+        <service class="GamaAcademy\Vacina\Api\VacinaRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+</routes>

@@ -333,9 +333,11 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Dotdigitalgroup_Chat' => 1,
         'Dotdigitalgroup_Sms' => 1,
+        'GamaAcademy_Customer' => 1,
         'GamaAcademy_ModuleConfigDemo' => 1,
         'GamaAcademy_ModuleDb2' => 1,
         'GamaAcademy_RestApiDemo' => 1,
+        'Yotpo_Yotpo' => 1,
         'Klarna_Core' => 1,
         'Klarna_Ordermanagement' => 1,
         'Klarna_Kp' => 1,
@@ -348,6 +350,6 @@ return [
         'Vertex_AddressValidationApi' => 1,
         'Vertex_AddressValidation' => 1,
         'WolfSellers_EnableDisableTfa' => 1,
-        'Yotpo_Yotpo' => 1
+        'GamaAcademy_Vacina' => 1
     ]
 ];

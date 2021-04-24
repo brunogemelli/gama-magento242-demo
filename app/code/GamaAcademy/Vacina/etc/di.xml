@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="GamaAcademy\Vacina\Api\Data\VacinaInterface" type="GamaAcademy\Vacina\Model\Vacina" />
+    <preference for="GamaAcademy\Vacina\Api\VacinaRepositoryInterface" type="GamaAcademy\Vacina\Model\VacinaRepository" />
+    <preference for="GamaAcademy\Vacina\Api\Data\VacinaSearchResultsInterface" type="GamaAcademy\Vacina\Model\VacinaSearchResults" />
+
+    <type name="Magento\Framework\EntityManager\HydratorPool">
+        <arguments>
+            <argument name="hydrators" xsi:type="array">
+                <item name="GamaAcademy\Vacina\Api\Data\VacinaInterface" xsi:type="string">Magento\Framework\EntityManager\AbstractModelHydrator</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="GamaAcademy\Vacina\Model\VacinaRepository">
+        <arguments>
+            <argument name="hydrator" xsi:type="object">Magento\Framework\EntityManager\AbstractModelHydrator</argument>
+        </arguments>
+    </type>
+
+</config>
+
