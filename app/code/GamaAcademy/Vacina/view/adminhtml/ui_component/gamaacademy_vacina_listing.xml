@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">gamaacademy_vacina_listing.gamaacademy_vacina_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/new"/>
+                <class>primary</class>
+                <label translate="true">Adicionar vacina</label>
+            </button>
+        </buttons>
+        <spinner>gamaacademy_vacina_columns</spinner>
+        <deps>
+            <dep>gamaacademy_vacina_listing.gamaacademy_vacina_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="gamaacademy_vacina_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Magento_Backend::admin</aclResource>
+        <dataProvider class="GamaAcademy\Vacina\Ui\Component\DataProvider" name="gamaacademy_vacina_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <filterSearch name="fulltext"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="gamaacademy_vacina_columns">
+        <selectionsColumn name="ids">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+        </selectionsColumn>
+        <column name="id">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">ID</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
+        <column name="nome">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Nome</label>
+            </settings>
+        </column>
+        <column name="fabricante">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Fabricante</label>
+            </settings>
+        </column>
+        <column name="laboratorio">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Laboratório</label>
+            </settings>
+        </column>
+        <column name="data_criacao" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date">
+            <settings>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <label translate="true">Data Criação</label>
+            </settings>
+        </column>
+        <column name="data_atualizacao" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date">
+            <settings>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <label translate="true">Data Atualização</label>
+            </settings>
+        </column>
+        <actionsColumn name="actions" class="GamaAcademy\Vacina\Ui\Component\Listing\Column\VacinaActions">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>

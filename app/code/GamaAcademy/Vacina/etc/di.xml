@@ -18,5 +18,23 @@
         </arguments>
     </type>
 
+
+
+    <!-- ui component - lista -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="gamaacademy_vacina_listing_data_source" xsi:type="string">GamaAcademyVacinaSearchResult</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="GamaAcademyVacinaSearchResult" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">gamaacademy_vacina</argument>
+            <argument name="resourceModel" xsi:type="string">GamaAcademy\Vacina\Model\ResourceModel\Vacina</argument>
+        </arguments>
+    </virtualType>
+
 </config>
 

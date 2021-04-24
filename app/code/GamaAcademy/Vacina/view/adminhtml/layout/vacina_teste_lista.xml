@@ -2,12 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-<!--            <uiComponent name="cms_block_listing"/>-->
-<!--            <block class="Magento\Backend\Block\Template" template="Magento_Cms::url_filter_applier.phtml" name="block_list_url_filter_applier">-->
-<!--                <arguments>-->
-<!--                    <argument name="listing_namespace" xsi:type="string">cms_block_listing</argument>-->
-<!--                </arguments>-->
-<!--            </block>-->
+            <uiComponent name="gamaacademy_vacina_listing"/>
             <block template="GamaAcademy_Vacina::teste1.phtml" name="teste1" />
         </referenceContainer>
     </body>

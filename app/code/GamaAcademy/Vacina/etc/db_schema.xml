@@ -17,7 +17,7 @@
             <column name="id"/>
         </constraint>
         <index referenceId="GAMAACADEMY_ID" indexType="fulltext">
-            <column name="name"/>
+            <column name="nome"/>
         </index>
     </table>
 </schema>
