@@ -1,0 +1,124 @@
+<?php
+
+/**
+ * @see
+ * https://inchoo.net/magento/out-of-the-box-form-validation-in-magento/
+ * https://magento.stackexchange.com/questions/119423/magento-2-how-to-validate-form-and-display-error-message-below-input-field
+ *
+ */
+
+
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+
+/** @var \GamaAcademy\Vacina\ViewModel\MyViewModel $viewModel */
+$viewModel = $block->getData('view_model');
+?>
+
+<form id="meu-form" method="post" class="form create vacina form-create-vacina">
+    <!-- form key -->
+    <?= /* @noEscape */ $block->getBlockHtml('formkey') ?>
+
+    <fieldset class="fieldset create info">
+        <div class="field nome required">
+            <label for="nome" class="label">
+                <span><?= $escaper->escapeHtml(__('Name')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text"
+                       name="nome"
+                       title="<?= $escaper->escapeHtmlAttr(__('Name')) ?>"
+                       id="nome"
+                       class="input-text"
+                       data-validate="{required:true}" >
+            </div>
+        </div>
+        <div class="field fabricante required">
+            <label for="fabricante" class="label">
+                <span><?= $escaper->escapeHtml(__('Manufacturer')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text"
+                       name="fabricante"
+                       title="<?= $escaper->escapeHtmlAttr(__('Manufacturer')) ?>"
+                       id="fabricante"
+                       class="input-text"
+                       data-validate="{required:true}" >
+            </div>
+        </div>
+        <div class="field laboratorio required">
+            <label for="laboratorio" class="label">
+                <span><?= $escaper->escapeHtml(__('Lab')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text"
+                       name="laboratorio"
+                       title="<?= $escaper->escapeHtmlAttr(__('Lab')) ?>"
+                       id="laboratorio"
+                       class="input-text"
+                       data-validate="{required:true}" >
+            </div>
+        </div>
+        <div class="field eficacia required">
+            <label for="eficacia" class="label">
+                <span><?= $escaper->escapeHtml(__('Eficacy')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text"
+                       name="eficacia"
+                       title="<?= $escaper->escapeHtmlAttr(__('Eficacy')) ?>"
+                       id="eficacia"
+                       class="input-text validate-digits validate-digits-range digits-range-0-100"
+                       data-validate="{required:true}" >
+            </div>
+        </div>
+        <div class="field nro_doses required">
+            <label for="nro_doses" class="label">
+                <span><?= $escaper->escapeHtml(__('Doses')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text"
+                       name="nro_doses"
+                       title="<?= $escaper->escapeHtmlAttr(__('Doses')) ?>"
+                       id="nro_doses"
+                       class="input-text validate-digits"
+                       data-validate="{required:true}" >
+            </div>
+        </div>
+        <div class="field pais required">
+            <label for="pais" class="label">
+                <span><?= $escaper->escapeHtml(__('Country')) ?></span>
+            </label>
+            <div class="control">
+                <select id="pais" name="pais" class="country required-entry" data-role="select-country">
+                    <?php foreach ($viewModel->getCountries() as $country): ?>
+                        <option value="<?= $escaper->escapeHtmlAttr($country->getFullNameLocale()) ?>">
+                            <?= $escaper->escapeHtml($country->getFullNameLocale()) ?>
+                        </option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- botoes -->
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit"
+                    class="action submit primary"
+                    title="<?= $escaper->escapeHtmlAttr(__('Create a Vaccine')) ?>">
+                <span><?= $escaper->escapeHtml(__('Create a Vaccine')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+<script>
+    require([
+        'jquery',
+        'mage/mage'
+    ], function($) {
+        var dataForm = $('#meu-form');
+        dataForm.mage('validation', {});
+    });
+</script>
