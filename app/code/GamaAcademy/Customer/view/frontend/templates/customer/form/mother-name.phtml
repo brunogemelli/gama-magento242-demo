@@ -1,0 +1,13 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+
+<div class="field field-mother-name">
+    <label class="label" for="<?= $block->escapeHtmlAttr('Mother Name') ?>">
+        <span><?= $block->escapeHtml('Mother Name') ?></span>
+    </label>
+    <div class="control">
+        <input type="text" id="mother_name"
+               name="mother_name"
+               title="<?= $block->escapeHtmlAttr(__('Mother Name')) ?>"
+               class="input-text" >
+    </div>
+</div>
