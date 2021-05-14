@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d64abaaee63ceb2ced96beca82076d",
+    "content-hash": "479ca684bee51f8ec0a8a24074cf0d94",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -712,6 +712,37 @@
             "description": "A Redis-based session handler with optimistic locking",
             "homepage": "https://github.com/colinmollenhour/php-redis-session-abstract",
             "time": "2021-04-07T21:51:17+00:00"
+        },
+        {
+            "name": "community-engineering/language-pt_br",
+            "version": "0.0.45",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magento-l10n/language-pt_BR.git",
+                "reference": "701c746a705eac66b0041d0bdfd3ea5435e9ecfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magento-l10n/language-pt_BR/zipball/701c746a705eac66b0041d0bdfd3ea5435e9ecfc",
+                "reference": "701c746a705eac66b0041d0bdfd3ea5435e9ecfc",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "*"
+            },
+            "type": "magento2-language",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "pt_BR language package.",
+            "time": "2021-04-27T00:04:08+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -22563,6 +22594,54 @@
                 "unicode"
             ],
             "time": "2017-01-16T07:08:25+00:00"
+        },
+        {
+            "name": "honl/magento2-templatehints",
+            "version": "0.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ho-nl/magento2-Ho_Templatehints.git",
+                "reference": "c66ab94c4282acd9e3ae93f52da85d64a86c3f73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ho-nl/magento2-Ho_Templatehints/zipball/c66ab94c4282acd9e3ae93f52da85d64a86c3f73",
+                "reference": "c66ab94c4282acd9e3ae93f52da85d64a86c3f73",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.1"
+            },
+            "replace": {
+                "ho-nl/magento2-templatehints": "self.version"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Ho\\Templatehints\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Hachmang - H&O",
+                    "email": "paul@h-o.nl"
+                }
+            ],
+            "description": "H&O Magento 2 Advanced Template Hints module",
+            "homepage": "https://github.com/ho-nl/magento2-Ho_Templatehints",
+            "time": "2020-04-17T12:48:43+00:00"
         },
         {
             "name": "jms/metadata",

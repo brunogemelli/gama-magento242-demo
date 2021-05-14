@@ -12,6 +12,7 @@
     },
     "version": "2.4.2",
     "require": {
+        "community-engineering/language-pt_br": "^0.0.45",
         "magento/composer-root-update-plugin": "~1.1",
         "magento/module-bundle-sample-data": "100.4.*",
         "magento/module-catalog-rule-sample-data": "100.4.*",
@@ -62,6 +63,7 @@
         "allure-framework/allure-phpunit": "~1.2.0",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "friendsofphp/php-cs-fixer": "~2.16.0",
+        "honl/magento2-templatehints": "^0.2.5",
         "lusitanian/oauth": "~0.8.10",
         "magento/magento-coding-standard": "*",
         "magento/magento2-functional-testing-framework": "^3.0",
