@@ -1,0 +1,27 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+
+<div class="bloco4-example">
+    <h1>Bloco 4 - criado no modulo GamaAcademy SecondModule </h1>
+    <div class="child-content">
+        <button id="btn-test">Teste de clique</button>
+        <h1>Filho 1:</h1>
+        <div class="child1">
+            <?php echo $block->getChildHtml('filho1'); ?>
+        </div>
+    </div>
+</div>
+
+<script>
+    require([
+        'jquery'
+    ], function (brunoTesteJquery) {
+
+        alert('Bruno Testando');
+
+        brunoTesteJquery('#btn-test').click(function (event) {
+            alert('clique do botão');
+        });
+    });
+</script>

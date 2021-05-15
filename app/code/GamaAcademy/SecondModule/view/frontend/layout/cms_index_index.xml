@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main.content">
+            <block name="teste4" template="GamaAcademy_SecondModule::bruno-exemplo/bloco-em-outro-modulo.phtml">
+                <block name="teste4-filho1" as="filho1" template="GamaAcademy_SecondModule::teste4/filho1.phtml" />
+            </block>
+        </referenceContainer>
+    </body>
+</page>

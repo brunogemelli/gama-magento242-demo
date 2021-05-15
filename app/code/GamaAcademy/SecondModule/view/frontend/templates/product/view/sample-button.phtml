@@ -1,0 +1,29 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+
+/** @var \GamaAcademy\SecondModule\ViewModel\ProductRetriever $productViewModel */
+$productViewModel = $block->getData('productRetriever');
+?>
+
+<button type="button" id="btn-test" class="action submit" title="<?php echo $block->escapeHtml(__('My Call to Action')); ?>">
+    <span><?php echo $block->escapeHtml(__('My Call to Action')); ?></span>
+</button>
+
+<script>
+    require([
+        'jquery',
+        'domReady!'
+    ], function ($) {
+
+        $('#btn-test').click(function (event) {
+            testAlert($(this));
+        });
+
+        function testAlert(button)
+        {
+            var productName = '<?php echo $block->escapeJs($productViewModel->getProduct()->getName()); ?>';
+            alert(productName);
+        }
+
+    });
+</script>
