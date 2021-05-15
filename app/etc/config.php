@@ -334,6 +334,8 @@ return [
         'Dotdigitalgroup_Chat' => 1,
         'Dotdigitalgroup_Sms' => 1,
         'Yotpo_Yotpo' => 1,
+        'GamaAcademy_SampleRewriteRoute' => 1,
+        'GamaAcademy_SampleRoute' => 1,
         'GamaAcademy_SecondModule' => 1,
         'Ho_Templatehints' => 1,
         'Klarna_Core' => 1,

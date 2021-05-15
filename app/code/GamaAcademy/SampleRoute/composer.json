@@ -1,0 +1,16 @@
+{
+    "name": "gamaacademy/module-sampleroute",
+    "description": "My description",
+    "type": "magento2-module",
+    "license": "OSL",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "GamaAcademy\\SampleRoute\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

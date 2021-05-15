@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="div.sidebar.main">
+            <block name="sidebar1" template="GamaAcademy_SampleRoute::sidebar/block1.phtml" />
+        </referenceContainer>
+        <referenceContainer name="main">
+            <block name="main1" template="GamaAcademy_SampleRoute::main/block1.phtml" />
+            <block name="main2" template="GamaAcademy_SampleRoute::main/block2.phtml" />
+        </referenceContainer>
+    </body>
+</page>

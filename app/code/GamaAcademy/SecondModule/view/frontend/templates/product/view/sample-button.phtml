@@ -21,7 +21,7 @@ $productViewModel = $block->getData('productRetriever');
 
         function testAlert(button)
         {
-            var productName = '<?php echo $block->escapeJs($productViewModel->getProduct()->getName()); ?>';
+            var productName = '<?php echo $block->escapeJs($productViewModel->getProduct()->getDescription()); ?>';
             alert(productName);
         }
 
