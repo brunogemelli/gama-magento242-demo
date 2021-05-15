@@ -1,0 +1,13 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+
+/** @var \GamaAcademy\FirstModule\ViewModel\MyFirstViewModel $viewModelSample */
+$viewModelSample = $block->getData('myFirstViewModel');
+?>
+
+<div>
+    <h1><?php echo __('Testing the second template file .phtml'); ?></h1>
+    <h2>teste view model = <?php echo $viewModelSample->getRandomNumber(); ?></h2>
+</div>
+
+

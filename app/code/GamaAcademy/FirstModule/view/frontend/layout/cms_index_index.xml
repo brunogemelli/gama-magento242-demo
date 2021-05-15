@@ -2,7 +2,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main.content">
-            <block name="block_test" template="GamaAcademy_FirstModule::homepage/banner-bruno.phtml" before="-" />
+            <block class="GamaAcademy\FirstModule\Block\FirstBlock" name="block_test" template="GamaAcademy_FirstModule::homepage/banner-bruno.phtml" before="-" />
+            <block name="block_test2" template="GamaAcademy_FirstModule::homepage/view-model-bruno.phtml">
+                <arguments>
+                    <argument name="myFirstViewModel" xsi:type="object">GamaAcademy\FirstModule\ViewModel\MyFirstViewModel</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>

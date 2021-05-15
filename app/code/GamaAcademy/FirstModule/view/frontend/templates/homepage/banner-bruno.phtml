@@ -1,1 +1,12 @@
-<h1>Testando o nosso arquivo de template .phtml</h1>
+<?php /** @var \GamaAcademy\FirstModule\Block\FirstBlock $block */ ?>
+
+<div>
+    <h1><?php echo __('Testing the first template file .phtml'); ?></h1>
+
+    <?php foreach ($block->getFakeItems() as $item): ?>
+        <h5><?php echo $item; ?></h5>
+    <?php endforeach; ?>
+
+</div>
+
+
