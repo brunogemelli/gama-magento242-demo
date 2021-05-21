@@ -1,0 +1,16 @@
+{
+    "name": "gamaacademy/module-di2",
+    "description": "My description",
+    "type": "magento2-module",
+    "license": "OSL",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "GamaAcademy\\Di2\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

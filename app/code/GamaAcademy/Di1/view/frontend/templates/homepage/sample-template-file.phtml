@@ -1,0 +1,15 @@
+<?php
+/** @var \GamaAcademy\Di1\Block\MyBlock $block */
+?>
+
+<div>
+    <h1><?php echo __('Testing the DI'); ?></h1>
+
+    <ul>
+        <?php foreach ($block->getList() as $listItem): ?>
+        <li><?php echo $listItem; ?></li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+
+

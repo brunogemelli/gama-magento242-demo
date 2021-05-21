@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- manipula a injeção no sistema inteiro -->
+    <preference for="GamaAcademy\Di1\Helper\MyClassInterface" type="GamaAcademy\Di1\Helper\MyClass" />
+
+<!--    <type name="GamaAcademy\Di1\Helper\MyClass">-->
+<!--        <arguments>-->
+<!--            <argument name="test" xsi:type="string">valor-alterado-no-type-1</argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+
+
+    <!-- exemplo 2 - virtual type -->
+    <type name="GamaAcademy\Di1\Block\MyBlock">
+        <arguments>
+            <argument name="myClass" xsi:type="object">VirtualTypeName</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="VirtualTypeName" type="GamaAcademy\Di1\Helper\MyClass">
+        <arguments>
+            <argument name="test" xsi:type="string">valor-alterado-virtual-type</argument>
+        </arguments>
+    </virtualType>
+
+</config>

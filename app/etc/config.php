@@ -333,6 +333,8 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Dotdigitalgroup_Chat' => 1,
         'Dotdigitalgroup_Sms' => 1,
+        'GamaAcademy_Di2' => 1,
+        'GamaAcademy_Di1' => 1,
         'Yotpo_Yotpo' => 1,
         'GamaAcademy_SampleRewriteRoute' => 1,
         'GamaAcademy_SampleRoute' => 1,
